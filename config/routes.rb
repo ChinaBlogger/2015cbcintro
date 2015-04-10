@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'mailer#index'
+  root 'static_pages#index'
   get 'mailer/index'
   resources :mailer
 end
