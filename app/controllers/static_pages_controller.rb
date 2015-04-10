@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def leave_email
+  end
+
+  def leave_message
+  end
 end
