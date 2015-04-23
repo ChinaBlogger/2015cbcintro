@@ -10,6 +10,6 @@ class MailerController < ApplicationController
     end
 
     def index
-        render :file => 'app/views/mailer/contact.html.erb'
+        render :file => 'app/views/static_page/contact.html.erb'
     end
 end
