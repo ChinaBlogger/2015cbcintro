@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'font-awesome-rails', '~> 4.3.0.0'
+gem 'mail', '~> 2.6.3'
 
 group :development, :test do
   gem 'byebug'
