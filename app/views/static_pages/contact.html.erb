@@ -28,27 +28,29 @@
     <p>告诉我们您的需求或建议</p>
   </header>
   <div class="box">
-    <form method="post" action="#">
-      <div class="row uniform 50%">
-        <div class="6u 12u(mobilep)">
-          <input type="text" name="name" id="name" value="" placeholder="姓名" />
-        </div>
-        <div class="6u 12u(mobilep)">
-          <input type="email" name="email" id="email" value="" placeholder="邮箱" />
-        </div>
+    <%= form_for :message, as: :message, url: contact_path do |f| %>
+    <div class="row uniform 50%">
+      <div class="6u 12u(mobilep)">
+        <%= f.text_field :username, placeholder: "姓名" %>
       </div>
-      <div class="row uniform 50%">
-        <div class="12u">
-          <textarea name="message" id="message" placeholder="输入您的反馈" rows="6"></textarea>
-        </div>
+      <div class="6u 12u(mobilep)">
+        <%= f.text_field :email, placeholder: "电子邮件" %>
       </div>
-      <div class="row uniform">
-        <div class="12u">
-          <ul class="actions align-center">
-            <li><input type="submit" value="发给我们" /></li>
-          </ul>
-        </div>
+    </div>
+    <div class="row uniform 50%">
+      <div class="12u">
+        <%= f.text_area :content, placeholder: "输入您的反馈", rows: 6%>
       </div>
-    </form>
+    </div>
+    <div class="row uniform">
+      <div class="12u">
+        <ul class="actions align-center">
+          <li>
+            <%= f.submit "发给我们" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
   </div>
 </section>
