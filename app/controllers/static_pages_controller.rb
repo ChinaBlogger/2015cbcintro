@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   end
 
   def leave_message
-    @message = Message.create(message_params)
+    message = Message.create(message_params)
     flash[:success] = "您的留言已提交！"
     redirect_to contact_path
   end
